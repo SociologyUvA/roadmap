@@ -35,15 +35,6 @@
         }
     </script>
     <style>
-        /* Pulse animation for the central "You are here" pin */
-        @keyframes custom-pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.08); opacity: 0.95; }
-        }
-        .pulse-pin {
-            animation: custom-pulse 2s infinite ease-in-out;
-        }
-
         /* Subtle animated flow for the dashed connection lines */
         @keyframes dash-flow {
             to {
@@ -98,9 +89,9 @@
     <!-- MAIN INTERACTIVE CONTAINER -->
     <main class="max-w-7xl mx-auto px-6 mt-12 relative z-10">
 
-        <!-- CENTRAL HUB: YOU ARE HERE -->
+        <!-- CENTRAL HUB: YOU ARE HERE (STATIC, NO PULSE) -->
         <div class="flex justify-center mb-16 md:mb-24">
-            <div id="hub-node" class="pulse-pin bg-white p-4 rounded-2xl border border-slate-200 shadow-lg flex flex-col items-center justify-center text-center max-w-xs relative z-10">
+            <div id="hub-node" class="bg-white p-4 rounded-2xl border border-slate-200 shadow-lg flex flex-col items-center justify-center text-center max-w-xs relative z-10">
                 <!-- Outer glowing circle representing the coffee-hub/current scanning location -->
                 <div class="w-16 h-16 bg-gradient-to-tr from-uva-crimson to-red-500 text-white rounded-full flex items-center justify-center shadow-lg shadow-red-500/30 border-4 border-white mb-2">
                     <i class="fa-solid fa-mug-hot text-xl"></i>
